@@ -8,13 +8,19 @@
 
 
 
+https://user-images.githubusercontent.com/70629274/228322905-848003bb-af61-414c-abcf-8d29f1a8013d.mp4
+
+
+
+
+
 ## What has been learned ?
 
   - RigidBody2d
   - BoxCollider2D
   - 2 players follow screen
   - Unity assets store 
-    
+
 </br>
 
 
