@@ -3,11 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-
 //This script represents a coin spawner into the map
 public class PlayerMoverScript : MonoBehaviour
 {
-
     public AudioClip jumpSound;
 
     public float speed = 5f;
@@ -16,9 +14,6 @@ public class PlayerMoverScript : MonoBehaviour
     public InputAction moveUp = new InputAction(type: InputActionType.Button);
     public InputAction moveRight = new InputAction(type: InputActionType.Button);
     public InputAction moveLeft = new InputAction(type: InputActionType.Button);
-  
-
-
 
     // Start is called before the first frame update
     void Start()
@@ -26,7 +21,6 @@ public class PlayerMoverScript : MonoBehaviour
         moveUp.Enable();
         moveLeft.Enable();
         moveRight.Enable();
-
     }
 
     // Update is called once per frame
@@ -35,7 +29,7 @@ public class PlayerMoverScript : MonoBehaviour
         if (moveUp.WasPerformedThisFrame())
         {
             AudioSource.PlayClipAtPoint(jumpSound, transform.position);
-            rigidBody2D.AddForce(Vector2.up * jumpForce,ForceMode2D.Impulse);   
+            rigidBody2D.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
         if (moveRight.IsPressed())
         {
@@ -45,6 +39,5 @@ public class PlayerMoverScript : MonoBehaviour
         {
             transform.position += new Vector3(-1, 0, 0) * speed * Time.deltaTime;
         }
-
     }
 }

@@ -4,11 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-
 //This script represents the logic on the UI
 public class LogicScript : MonoBehaviour
 {
-
     public int player1Score;
     public int player2Score;
     public Text player1Text;
@@ -16,33 +14,30 @@ public class LogicScript : MonoBehaviour
     const int playerOneLayer = 3;
     const int playerTwoLayer = 6;
 
-
-
-
     //increase specfic player score by specfic score
-    [ContextMenu("Increase Score")]  
-    public void addScore(int scoreToadd,int playerLayer)
+    [ContextMenu("Increase Score")]
+    public void addScore(int scoreToadd, int playerLayer)
     {
-        if(playerLayer == playerOneLayer) {
+        if (playerLayer == playerOneLayer)
+        {
             player1Score += scoreToadd;
             player1Text.text = player1Score.ToString();
-
-        }else if(playerLayer == playerTwoLayer) {
+        }
+        else if (playerLayer == playerTwoLayer)
+        {
             player2Score += scoreToadd;
             player2Text.text = player2Score.ToString();
         }
     }
 
-
     //reset the player score that tuched the water
-    [ContextMenu("Player Reset")]   
+    [ContextMenu("Player Reset")]
     public void playerReset(int playerLayer)
     {
         if (playerLayer == playerOneLayer)
         {
             player1Score = 0;
             player1Text.text = player1Score.ToString();
-
         }
         else if (playerLayer == playerTwoLayer)
         {
@@ -50,5 +45,4 @@ public class LogicScript : MonoBehaviour
             player2Text.text = player2Score.ToString();
         }
     }
-
 }
