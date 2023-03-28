@@ -14,13 +14,6 @@ https://user-images.githubusercontent.com/70629274/228322905-848003bb-af61-414c-
 
 
 
-https://user-images.githubusercontent.com/70629274/224410957-9747004a-ca02-485f-8d98-013cecee816f.mp4
-
-
-
-
-
-
 ## What has been learned ?
 
   - RigidBody2d
