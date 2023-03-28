@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+//This script represents a coin spawner into the map
+
 public class CoinSpawnerScript : MonoBehaviour
 {
 
@@ -15,10 +18,10 @@ public class CoinSpawnerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        createCoin();
+        createCoin(); // create coin with the first frame
     }
 
-    // Update is called once per frame
+    // create coin at a spawn rate
     void Update()
     {
         if (timer < spawnRate)
@@ -30,13 +33,11 @@ public class CoinSpawnerScript : MonoBehaviour
             createCoin();
             timer = 0;
         }
-
-
     }
 
+    //create coin
     void createCoin()
     {
- 
         Instantiate(coin, new Vector3(Random.Range(leftMaxBorder, rightMaxBorder) , transform.position.y, 0) , transform.rotation);
     }
 

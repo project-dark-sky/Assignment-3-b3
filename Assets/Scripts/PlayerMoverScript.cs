@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+
+//This script represents a coin spawner into the map
 public class PlayerMoverScript : MonoBehaviour
 {
 
